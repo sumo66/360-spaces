@@ -60,16 +60,11 @@ export default function Home() {
 
       <div className="w-full max-w-[900px] text-center flex flex-col items-center relative z-10">
         {/* Logo */}
-        <div className="mb-10 flex flex-col items-center gap-1">
+        <div className="mb-10 flex flex-col items-center">
           <img
             src="/logo.svg"
             alt="ThreeSixty"
             className="w-[280px] md:w-[420px] h-auto"
-          />
-          <img
-            src="/logo-icon.svg"
-            alt="Spaces"
-            className="w-[175px] md:w-[260px] h-auto"
           />
         </div>
 
