@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -40,24 +41,40 @@ export default function Home() {
     }
   };
 
+  const inputStyle = {
+    background: "transparent",
+    border: "0.65px solid white",
+  };
+
   return (
-    <main
-      className="min-h-screen flex items-center justify-center px-6 py-16"
-      style={{
-        background:
-          "linear-gradient(135deg, #c4b84e 0%, #d4a053 15%, #d98a6a 25%, #d66f8f 35%, #c964a8 45%, #b060b8 55%, #8a5ec0 65%, #6a5fbf 75%, #5060c0 85%, #4a5abf 100%)",
-      }}
-    >
-      <div className="w-full max-w-[900px] text-center flex flex-col items-center">
+    <main className="min-h-screen flex items-center justify-center px-6 py-16 relative overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/bg.png"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        quality={90}
+      />
+
+      <div className="w-full max-w-[900px] text-center flex flex-col items-center relative z-10">
         {/* Logo */}
-        <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight mb-10 drop-shadow-lg">
-          ThreeSi<span className="italic">x</span>ty
-          <br />
-          Spaces
-        </h1>
+        <div className="mb-10 flex flex-col items-center">
+          <img
+            src="/logo.svg"
+            alt="ThreeSixty"
+            className="w-[300px] md:w-[374px] h-auto"
+          />
+          <img
+            src="/logo-icon.svg"
+            alt="Spaces"
+            className="w-[190px] md:w-[233px] h-auto -mt-1"
+          />
+        </div>
 
         {/* Description */}
-        <p className="text-white/95 text-base md:text-lg leading-relaxed max-w-[760px] mb-12 drop-shadow-sm">
+        <p className="text-white text-base md:text-[26px] md:leading-normal tracking-[-0.52px] max-w-[760px] mb-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non velit
           vel augue fermentum luctus. Integer sit amet risus vel neque efficitur
           malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et
@@ -66,21 +83,21 @@ export default function Home() {
         </p>
 
         {/* Coming Soon */}
-        <h2 className="text-white text-2xl md:text-3xl font-extrabold tracking-[4px] mb-10 drop-shadow-lg">
+        <h2 className="text-white text-[32px] font-medium tracking-[-1.28px] leading-[45px] mb-10">
           COMING SOON
         </h2>
 
         {/* Form Card */}
         <div
-          className="w-full max-w-[660px] rounded-2xl p-8 md:p-10"
+          className="w-full max-w-[660px] rounded-[24px] p-8 md:p-10"
           style={{
-            background: "rgba(255, 255, 255, 0.15)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
+            background: "rgba(255, 255, 255, 0.14)",
+            backdropFilter: "blur(6px)",
+            WebkitBackdropFilter: "blur(6px)",
+            border: "0.5px solid white",
           }}
         >
-          <h3 className="text-[#2d2045] text-xl md:text-2xl font-bold mb-4">
+          <h3 className="text-white text-[31px] tracking-[-0.63px] mb-4 text-center">
             Be the First to Know
           </h3>
           <div className="h-px bg-white/50 mb-7" />
@@ -95,12 +112,8 @@ export default function Home() {
                   setForm({ ...form, first_name: e.target.value })
                 }
                 required
-                className="w-full px-4 py-3.5 rounded-xl text-[#2d2045] text-sm outline-none transition-all"
-                style={{
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.5)",
-                }}
+                className="w-full px-5 py-3 rounded-full text-white text-[17px] tracking-[-0.34px] placeholder-white/60 outline-none"
+                style={inputStyle}
               />
               <input
                 type="text"
@@ -110,27 +123,19 @@ export default function Home() {
                   setForm({ ...form, last_name: e.target.value })
                 }
                 required
-                className="w-full px-4 py-3.5 rounded-xl text-[#2d2045] text-sm outline-none transition-all"
-                style={{
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.5)",
-                }}
+                className="w-full px-5 py-3 rounded-full text-white text-[17px] tracking-[-0.34px] placeholder-white/60 outline-none"
+                style={inputStyle}
               />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <input
                 type="email"
                 placeholder="Email address"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                className="w-full px-4 py-3.5 rounded-xl text-[#2d2045] text-sm outline-none transition-all"
-                style={{
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.5)",
-                }}
+                className="w-full px-5 py-3 rounded-full text-white text-[17px] tracking-[-0.34px] placeholder-white/60 outline-none"
+                style={inputStyle}
               />
               <input
                 type="tel"
@@ -138,24 +143,18 @@ export default function Home() {
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 required
-                className="w-full px-4 py-3.5 rounded-xl text-[#2d2045] text-sm outline-none transition-all"
-                style={{
-                  background: "rgba(255,255,255,0.25)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.5)",
-                }}
+                className="w-full px-5 py-3 rounded-full text-white text-[17px] tracking-[-0.34px] placeholder-white/60 outline-none"
+                style={inputStyle}
               />
             </div>
 
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full py-4 rounded-xl text-[#2d2045] font-semibold text-base cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed mt-1"
+              className="w-full py-5 rounded-full text-[#312f77] font-normal text-[24px] tracking-[-0.48px] cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed"
               style={{
-                background:
-                  "linear-gradient(135deg, rgba(255,230,210,0.7), rgba(240,220,230,0.6))",
-                backdropFilter: "blur(10px)",
-                border: "none",
+                background: "rgba(255, 255, 255, 0.72)",
+                border: "1px solid white",
               }}
             >
               {status === "loading" ? "Submitting..." : "Subscribe"}
