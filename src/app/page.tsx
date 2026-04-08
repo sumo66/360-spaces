@@ -97,7 +97,7 @@ export default function Home() {
             border: "0.5px solid white",
           }}
         >
-          <h3 className="text-white text-[31px] tracking-[-0.63px] mb-4 text-center">
+          <h3 className="text-white text-[31px] font-semibold tracking-[-0.63px] mb-4 text-center">
             Be the First to Know
           </h3>
           <div className="h-px bg-white/50 mb-7" />
@@ -151,7 +151,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full py-5 rounded-full text-[#312f77] font-normal text-[24px] tracking-[-0.48px] cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full py-5 rounded-full text-[#312f77] font-semibold text-[24px] tracking-[-0.48px] cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed"
               style={{
                 background: "rgba(255, 255, 255, 0.72)",
                 border: "1px solid white",
