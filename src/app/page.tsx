@@ -74,12 +74,14 @@ export default function Home() {
         </div>
 
         {/* Description */}
+        <p className="text-white text-base md:text-[26px] md:leading-normal tracking-[-0.52px] max-w-[760px] mb-4">
+          A Miami-based collective of entrepreneurs and creatives—bringing
+          together spaces to work, collaborations to grow, and experiences to
+          remember.
+        </p>
         <p className="text-white text-base md:text-[26px] md:leading-normal tracking-[-0.52px] max-w-[760px] mb-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non velit
-          vel augue fermentum luctus. Integer sit amet risus vel neque efficitur
-          malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et
-          ultrices posuere cubilia curae; Donec eget erat vel lacus facilisis
-          lacinia. Praesent et nunc nec nulla tristique cursus.
+          We&apos;re about to go live. Sign up below and we&apos;ll keep you
+          posted.
         </p>
 
         {/* Coming Soon */}
