@@ -28,9 +28,8 @@ export default function Home() {
       const data = await res.json();
 
       if (data.success) {
-        setStatus("success");
-        setMessage(data.message);
-        setForm({ first_name: "", last_name: "", email: "", phone: "" });
+        window.location.href = "/thank-you";
+        return;
       } else {
         setStatus("error");
         setMessage(data.message);
