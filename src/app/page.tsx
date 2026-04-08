@@ -74,14 +74,12 @@ export default function Home() {
         </div>
 
         {/* Description */}
-        <p className="text-white text-base md:text-[26px] md:leading-normal tracking-[-0.52px] max-w-[760px] mb-4">
-          A Miami-based collective of entrepreneurs and creatives—bringing
-          together spaces to work, collaborations to grow, and experiences to
-          remember.
-        </p>
         <p className="text-white text-base md:text-[26px] md:leading-normal tracking-[-0.52px] max-w-[760px] mb-12">
-          We&apos;re about to go live. Sign up below and we&apos;ll keep you
-          posted.
+          Miami&apos;s next creative engine is almost here — a collective built
+          for entrepreneurs and creatives who want more than a workspace. Think
+          collaborations that actually lead somewhere, and experiences you
+          won&apos;t find anywhere else. We&apos;re launching soon, and early
+          members get first access. Drop your info now.
         </p>
 
         {/* Coming Soon */}
