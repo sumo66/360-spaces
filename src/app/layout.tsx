@@ -11,12 +11,12 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "ThreeSixty — Coming Soon",
   description:
-    "A Miami-based collective of entrepreneurs and creatives. Spaces to work, collaborations to grow, experiences to remember. Sign up for early access.",
+    "A collective built for entrepreneurs and creatives who want more than a workspace.",
   metadataBase: new URL("https://threesixty.club"),
   openGraph: {
     title: "ThreeSixty — Coming Soon",
     description:
-      "A Miami-based collective of entrepreneurs and creatives. Spaces to work, collaborations to grow, experiences to remember.",
+      "A collective built for entrepreneurs and creatives who want more than a workspace.",
     url: "https://threesixty.club",
     siteName: "ThreeSixty",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ThreeSixty — Coming Soon",
     description:
-      "A Miami-based collective of entrepreneurs and creatives. Spaces to work, collaborations to grow, experiences to remember.",
+      "A collective built for entrepreneurs and creatives who want more than a workspace.",
     images: ["/og-image.jpg"],
   },
 };
