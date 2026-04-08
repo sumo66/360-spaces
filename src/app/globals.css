@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-montserrat: var(--font-montserrat);
+  --font-jakarta: var(--font-jakarta);
 }
 
 body {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-jakarta), sans-serif;
   margin: 0;
 }
